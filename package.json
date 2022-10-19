@@ -1,0 +1,18 @@
+{
+  "name": "type-level-game-of-life",
+  "version": "0.0.0",
+  "description": "Type Level Game of Life in TypeScript",
+  "main": "gol.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "types"
+  ],
+  "author": "Gabriele Lana <gabriele.lana@gmail.com> (http://github.com/gabrielelana)",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "typescript-language-server": "^2.0.1"
+  }
+}
