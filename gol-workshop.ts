@@ -204,7 +204,7 @@ type Universe = UniverseWithDimension<Mul<Five, Five>>;
 
 // prettier-ignore
 type UniverseS1 = [
-  " ", " ", " ", " ", " "
+  " ", " ", " ", " ", " ",
   " ", " ", "#", " ", " ",
   " ", " ", "#", " ", " ",
   " ", " ", "#", " ", " ",
