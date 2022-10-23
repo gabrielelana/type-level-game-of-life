@@ -405,3 +405,27 @@ type EvolveU<
       : never
     : never
   : never;
+
+// TODO: reveal
+
+type ConcatU<U extends Array<Cell>, R extends string = ""> = U extends []
+  ? R
+  : U extends [infer C, ...infer T]
+  ? C extends Cell
+    ? T extends Array<Cell>
+      ? ConcatU<T, `${C}${R}`>
+      : never
+    : never
+  : never;
+
+type _10003 = Assert<EQT<"       #    #    #       ", ConcatU<UniverseS1>>>;
+
+type EvolveN<
+  N extends Natural,
+  U extends Universe,
+  R extends Array<any> = []
+> = N extends Zero ? R : EvolveN<Dec<N>, EvolveU<U>, [...R, ConcatU<U>]>;
+
+// TODO: show completion
+
+const u: EvolveN<Three, UniverseS1> = undefined;
